@@ -1,0 +1,184 @@
+@import "assets/css/colors.scss";
+
+// ---- footer container -------
+footer {
+  // ------ upper main part of footer -----
+  .main-part {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5rem;
+    // ------- subscription part -----
+    .follow-us {
+      h4 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 139%;
+        color: $granate;
+        opacity: 0.8;
+      }
+      // ---- form for subscription -----
+      form {
+        margin-top: 3rem;
+        .subscribe {
+          height: 4.2rem;
+          display: flex;
+        }
+        .privacy-check {
+          margin-top: 1.5rem;
+          display: flex;
+          align-items: center;
+        }
+        input[type="text"] {
+          background: $gris-clar;
+          color: $granate;
+          height: 100%;
+          border: none;
+          outline: none;
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 136%;
+          border-radius: 0.3rem 0 0 0.3rem;
+          padding: 1.5rem;
+          &::placeholder {
+            opacity: 0.9;
+          }
+        }
+        input[type="submit"] {
+          background: $vermell;
+          height: 100%;
+          border-radius: 0 0.3rem 0.3rem 0;
+          border: none;
+          outline: none;
+          font-weight: 400;
+          font-size: 1.5rem;
+          line-height: 136%;
+          text-transform: capitalize;
+          color: $gris-clar;
+          padding: 1.1rem 1.5rem;
+        }
+        input[type="checkbox"] {
+          border-color: $granate;
+          margin-right: 1rem;
+          &:checked {
+            background: $gris-clar;
+          }
+        }
+        label {
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 160%;
+          color: $granate;
+          opacity: 0.6;
+          span {
+            border-bottom: 0.1rem solid rgba(38, 7, 25, 0.6);
+          }
+        }
+      }
+    }
+    // ------- footer links ------
+    .links {
+      display: flex;
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 134.8%;
+      text-transform: capitalize;
+      justify-content: space-evenly;
+      li {
+        margin-bottom: 2.1rem;
+        &:first-child {
+          font-weight: 500;
+          line-height: 139%;
+        }
+      }
+      a {
+        color: $granate;
+        &:hover {
+          color: $vermell;
+          opacity: 0.8;
+        }
+      }
+    }
+    // ----- sosial links ------
+    .sosial {
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          margin: 0 0.9rem;
+          svg {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: $granate;
+            padding: 1rem;
+            color: $gris-clar;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+  // ------ lower part of footer ------
+  .extra-part {
+    border-top: 0.1rem solid rgba(38, 7, 25, 0.2);
+    margin: 0 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    ul {
+      display: flex;
+      padding: 3rem 4rem;
+      li {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 140%;
+        letter-spacing: -0.02rem;
+        color: $granate;
+        opacity: 0.6;
+        margin-left: 3.6rem;
+        &:last-child {
+          line-height: 2rem;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// ------- for mobile screen --------
+@media screen and (max-width: 1023px) {
+  footer {
+    // ------ upper main part of footer -----
+    .main-part {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      .follow-us {
+        text-align: center;
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .follow-us,
+      .links,
+      .sosial {
+        padding: 3rem 0;
+      }
+    }
+    // ------ lower part of footer ------
+    .extra-part {
+      display: block;
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        li {
+          margin: 0.5rem auto;
+        }
+      }
+    }
+  }
+}

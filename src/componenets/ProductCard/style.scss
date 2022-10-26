@@ -1,0 +1,120 @@
+@import "assets/css/colors.scss";
+
+// ---card container ---
+.card {
+  color: $granate;
+  transition: 0.5s;
+  width: 42.6rem;
+  margin: 0 auto;
+  &:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  // ------ card image ------
+  .card-cover {
+    height: 46.5rem;
+    align-self: stretch;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 0.1rem;
+    // ---- discount span -----
+    .discount {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.2rem;
+      width: 4.9rem;
+      height: 2.6rem;
+      background: $ross;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 4rem;
+      border-radius: 0.3rem;
+      padding: 0 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    // ---- sizes -----
+    .sizes {
+      display: flex;
+      padding: 2.6rem 0.9rem;
+      flex-wrap: wrap;
+      span {
+        background: $blanc;
+        padding: 0.9rem 1.6rem;
+        margin: 0.9rem;
+      }
+    }
+  }
+  // ----- card contect ------
+  .card-content {
+    background: $blanc;
+    padding: 1.5rem 2.5rem;
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.3rem;
+      .title {
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 134.8%;
+        text-transform: capitalize;
+      }
+      .price {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 3.7rem;
+        letter-spacing: -0.045em;
+      }
+    }
+    .card-properties {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 121.8%;
+      opacity: 0.7;
+      li {
+        margin-bottom: 1.3rem;
+        img {
+          margin-right: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+// ----- media query for card container ----
+
+// --- break point 1024px -----
+@media screen and (max-width: 1023px) {
+  .card {
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    margin: 0 auto;
+  }
+}
+//---- break point 500px ----
+@media screen and (max-width: 500px) {
+  .card {
+    width: 30rem;
+    .card-cover {
+      height: 36rem;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    width: 42.6rem;
+    .card-cover {
+      height: 46.5rem;
+    }
+  }
+}

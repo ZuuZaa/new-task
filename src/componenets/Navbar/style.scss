@@ -1,0 +1,163 @@
+@import "assets/css/colors.scss";
+
+// ----- navbar -----
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  border-bottom: 0.1rem solid hsla(0, 0%, 100%, 0.1);
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  transition: 0.5s;
+  // ----- logo ------
+  .logo-wrapper {
+    width: 8.1rem;
+    height: 8.1rem;
+    background: $vermell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    a {
+      color: $white;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 150%;
+    }
+    &:hover {
+      background: transparent;
+      a {
+        color: $vermell;
+      }
+    }
+  }
+  // ------ nav links ------
+  nav {
+    .nav-icon {
+      font-size: 2.2rem;
+    }
+    a {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 3rem;
+      margin: 0 1.7rem;
+      transition: 0.5s;
+      &:hover {
+        color: $vermell;
+      }
+    }
+  }
+}
+// ---- background on scroll ----
+.white {
+  background: $blanc;
+}
+// ----- link style when nav is transparent ------
+.transparent {
+  background: transparent;
+  nav {
+    a {
+      color: $blanc;
+    }
+    .nav-link-shop {
+      border: 0.1rem solid $blanc;
+    }
+    .nav-link-design {
+      border: 0.1rem solid $blanc;
+    }
+  }
+}
+
+// ------- desktop screen ------
+@media screen and (min-width: 1024px) {
+  .navbar {
+    nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.7rem;
+      height: 8rem;
+      .nav-link-shop {
+        padding: 0.7rem 2rem;
+        border-radius: 41px;
+        margin-left: 3rem;
+        &:hover {
+          border: 0.1rem solid $vermell;
+          background: rgba(38, 7, 25, 0.17);
+        }
+      }
+      .nav-link-design {
+        border-radius: 0.4rem;
+        padding: 1.2rem 2rem;
+        &:hover {
+          border: 0.1rem solid $vermell;
+        }
+      }
+      ul {
+        display: flex;
+      }
+    }
+  }
+  .white {
+    nav {
+      a {
+        color: $granate;
+      }
+      .nav-link-shop {
+        background: rgba(38, 7, 25, 0.17);
+        border: 0.1rem solid transparent;
+      }
+      .nav-link-design {
+        border: 0.1rem solid $granate;
+      }
+    }
+  }
+}
+// ------ mobile screen -----
+@media screen and (max-width: 1023px) {
+  .navbar {
+    justify-content: space-between;
+    .hamburger-lines {
+      display: flex;
+      flex-direction: column;
+      margin: 0 3rem;
+      .line {
+        display: inline-block;
+        width: 3rem;
+        height: 0.3rem;
+        background-color: $vermell;
+        margin: 0.3rem;
+      }
+    }
+    .show-nav {
+      top: 0;
+      opacity: 0.8;
+    }
+    // --- mobile friendly nav ------
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+      top: -30rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background: $blanc;
+      height: 30rem;
+      width: 100vw;
+      transition: all 1s ease-in-out;
+      a {
+        color: $granate;
+        &:hover {
+          letter-spacing: 0.5rem;
+        }
+      }
+    }
+  }
+}
