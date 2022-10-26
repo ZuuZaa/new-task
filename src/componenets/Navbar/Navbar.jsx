@@ -31,7 +31,7 @@ export const Navbar = () => {
     >
       {/* ----- logo ------ */}
       <div className="logo-wrapper">
-        <a href="#" className="logo">
+        <a href="/" className="logo">
           DESK
         </a>
       </div>
@@ -39,30 +39,30 @@ export const Navbar = () => {
       <nav className={navIsOpen ? "show-nav" : "nav"}>
         <ul>
           <li>
-            <a href="#" className="nav-link-shop">
+            <a href="/" className="nav-link-shop">
               Shop
             </a>
           </li>
           <li>
-            <a href="#">Why us</a>
+            <a href="/">Why us</a>
           </li>
           <li>
-            <a href="#">For companies </a>
+            <a href="/">For companies </a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="#" className="nav-link-design">
+            <a href="/" className="nav-link-design">
               Design your space
             </a>
           </li>
           <li>
-            <a href="#" className="nav-icon">
+            <a href="/" className="nav-icon">
               <AiOutlineUser />
             </a>
           </li>
           <li>
-            <a href="#" className="nav-icon">
+            <a href="/" className="nav-icon">
               <SlBasket />
             </a>
           </li>

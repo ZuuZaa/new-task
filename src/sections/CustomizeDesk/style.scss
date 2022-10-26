@@ -28,14 +28,14 @@
   // --------- section image --------
   .customize-section-images-content {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     .custom-desk {
       width: 51.9rem;
       height: 79.3rem;
       position: relative;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       .desk-base {
         position: absolute;
         right: 0;

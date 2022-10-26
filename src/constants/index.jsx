@@ -103,23 +103,23 @@ export const mainFooterLinks = [
     links: [
       {
         name: "shop",
-        url: "#",
+        url: "/",
       },
       {
         name: "one",
-        url: "#",
+        url: "/",
       },
       {
         name: "pro",
-        url: "#",
+        url: "/",
       },
       {
         name: "accesorios",
-        url: "#",
+        url: "/",
       },
       {
         name: "FAQs",
-        url: "#",
+        url: "/",
       },
     ],
   },
@@ -128,23 +128,23 @@ export const mainFooterLinks = [
     links: [
       {
         name: "about",
-        url: "#",
+        url: "/",
       },
       {
         name: "quiénes somos",
-        url: "#",
+        url: "/",
       },
       {
         name: "why us",
-        url: "#",
+        url: "/",
       },
       {
         name: "contactanos",
-        url: "#",
+        url: "/",
       },
       {
         name: "blog",
-        url: "#",
+        url: "/",
       },
     ],
   },

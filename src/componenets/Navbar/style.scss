@@ -123,12 +123,23 @@
       display: flex;
       flex-direction: column;
       margin: 0 3rem;
+      overflow: hidden;
       .line {
         display: inline-block;
-        width: 3rem;
+        width: 4rem;
         height: 0.3rem;
         background-color: $vermell;
         margin: 0.3rem;
+        transition: all .5s;
+
+      }
+      &:hover {
+        .line1 {
+          transform: translateX(2rem);
+        }
+        .line3 {
+          transform: translateX(-2rem);
+        }
       }
     }
     .show-nav {
